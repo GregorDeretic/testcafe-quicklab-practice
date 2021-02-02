@@ -7,7 +7,7 @@ import sleep from "../src/func_utils"
 fixture `Personal Details Tests`            // Notice the back-tick, NOT a single or double quote
     .page `../src/practice_page.html`     // notice what heppens when the test is run...  Add semicolon if no optional elements
 
-    test.skip('test username', async t => {
+    test('test username', async t => {
         const username = Selector('#username');
 
 
@@ -17,7 +17,7 @@ fixture `Personal Details Tests`            // Notice the back-tick, NOT a singl
         await sleep(3000);
     });
 
-    test.skip('test if an expression is entered into first-name & last-name, the first letter of each word is capitalised', async t => {
+    test('test if an expression is entered into first-name & last-name, the first letter of each word is capitalised', async t => {
         const firstname = Selector('#firstname');
         
 
@@ -28,7 +28,7 @@ fixture `Personal Details Tests`            // Notice the back-tick, NOT a singl
         await sleep(3000);
     });
 
-    test.skip('If form is loaded, age label is empty', async t => {
+    test('If form is loaded, age label is empty', async t => {
         const ageElement = Selector('#age');
         
         await t     // We wait on a Promise
